@@ -1,0 +1,34 @@
+
+:root {
+  --bg: #070a0f;
+  --card: #0e1220;
+  --neon1: #00e5ff;
+  --neon2: #8a2be2;
+  --text: #d6e7ff;
+  --muted: #9fb4d6;
+}
+html, body, [data-testid="stAppViewContainer"] {
+  background: var(--bg) !important;
+  color: var(--text);
+}
+.header { text-align:center; padding:14px 10px 6px; }
+.header .title { font-size: 42px; margin:0; color:var(--text);
+  text-shadow:0 0 12px rgba(138,43,226,0.5), 0 0 22px rgba(0,229,255,0.35); }
+.header .title span { color: var(--neon1); }
+.header .sub { margin-top:6px; color:var(--muted); }
+.card {
+  background: linear-gradient(180deg, rgba(14,18,32,0.9), rgba(14,18,32,0.7));
+  border: 1px solid rgba(138,43,226,0.35);
+  border-radius: 18px; padding: 18px;
+  transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+}
+.card:hover { box-shadow: 0 0 24px rgba(0,229,255,0.25), inset 0 0 16px rgba(138,43,226,0.15);
+  transform: translateY(-2px); border-color: rgba(0,229,255,0.45); }
+.neon-frame { border-radius:14px; overflow:hidden; border:1px solid rgba(0,229,255,0.4); }
+.neon-frame.glow { box-shadow: 0 0 24px rgba(0,229,255,0.25), inset 0 0 10px rgba(138,43,226,0.2); }
+.stButton>button {
+  background: linear-gradient(90deg, rgba(0,229,255,0.1), rgba(138,43,226,0.15));
+  border: 1px solid rgba(0,229,255,0.35); border-radius:12px; color:var(--text);
+}
+.stButton>button:hover { transform: translateY(-1px); box-shadow: 0 0 16px rgba(0,229,255,0.25); }
+[data-testid="stSidebar"] { background:#0b0f18 !important; border-right:1px solid rgba(0,229,255,0.15); }
